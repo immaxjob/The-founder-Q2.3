@@ -38,6 +38,7 @@ def complicated_percents(first_deposit: int = 0,
 
 # 4
 def arithmetic(a: int = 0, b: int = 0) -> str:
+    """A function that match difference arithmetic tasks"""
     return (f'\n\tСумма a+b: {a+b}'
             f'\n\tРазница a-b: {a-b}'
             f'\n\tПроизведение a*b: {a*b}'
@@ -48,7 +49,7 @@ def arithmetic(a: int = 0, b: int = 0) -> str:
 
 # 5
 def cashbox(cash_sum: int = 0) -> str:
-
+    """A function that return the number of required coin."""
     answer = ''
     main_sum = cash_sum
 
@@ -86,21 +87,25 @@ def cashbox(cash_sum: int = 0) -> str:
 
 
 def full_bread(old_bread_count: int = 0, bread_cost: int = 49, discount: int = 60) -> str:
+    """A function that calculate the cost of bread"""
     old_bread_cost = bread_cost - bread_cost * 60 / 100
     return (f'\nСтоимость свежей буханки: {bread_cost}'
             f'\nСтоимость вчерашней буханки со скидкой: '
             f'{old_bread_cost}'
-            f'\nОбщая стоимость вчерашнего хлеба: {old_bread_count * old_bread_cost}')
+            f'\nОбщая стоимость вчерашнего хлеба: '
+            f'{old_bread_count * old_bread_cost}')
 
 
 def main():
+    """A main function that gives options to choice for the user."""
     # Выбор пользователем задания
     result: str
     while True:
         try:
-            selection = int(input('\n---\nВыберите задачу с 1-6 или '
-                              'exit чтобы выйти\n--> '))
-            if selection != 'exit': int(selection)
+            selection = input('\n---\nВыберите задачу с 1-6 или '
+                              'exit чтобы выйти\n--> ')
+            if selection != 'exit':
+                selection = int(selection)
             match selection:
                 case 1:
                     print(greetings(input('\nВведите своё имя --> ')))
@@ -127,15 +132,14 @@ def main():
                 case 6:
                     print(full_bread(int(input('\nУкажите желаемое '
                                                'количество хлеба --> '))))
+                case 'exit':
+                    break
                 case '_':
                     continue
 
         except ValueError:
             print('\n---\nВведите корректное запрашиваемое значение!')
 
-
-    # Примечание - ввести строку в число и наоборот, сломать программу,
-    # обработать valueError
 
 if __name__ == '__main__':
     main()
