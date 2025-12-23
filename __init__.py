@@ -3,7 +3,7 @@ from math import log10
 
 # 1
 def greetings(username:str='User') -> str:
-    """A function that greetings User.
+    """Function that greetings User.
 
     :param username: Custom username by user. `Username` is **User** by default.
     :return: str
@@ -15,7 +15,7 @@ def souvenirs_and_trinkets(souvenirs_number: int = 0,
                            trinkets_number: int = 0,
                            souvenirs_mass: int = 75,
                            trinkets_mass: int = 112) -> str:
-    """A function that summarize weight of purchase."""
+    """Function that summarize weight of purchase."""
     return f'\n\tРассчитанный вес покупки: {(souvenirs_number * souvenirs_mass
                             + trinkets_number * trinkets_mass)}'
 
@@ -23,7 +23,7 @@ def souvenirs_and_trinkets(souvenirs_number: int = 0,
 def complicated_percents(first_deposit: int = 0,
                          percent: int = 4,
                          years: int = 3) -> str:
-    """A function that count on the amount of money in the user's account
+    """Function that count on the amount of money in the user's account
     for several years"""
     answer = f'\nПри условии {percent}% годовых.'
 
@@ -38,7 +38,7 @@ def complicated_percents(first_deposit: int = 0,
 
 # 4
 def arithmetic(a: int = 0, b: int = 0) -> str:
-    """A function that match difference arithmetic tasks"""
+    """Function that match difference arithmetic tasks"""
     return (f'\n\tСумма a+b: {a+b}'
             f'\n\tРазница a-b: {a-b}'
             f'\n\tПроизведение a*b: {a*b}'
@@ -49,7 +49,7 @@ def arithmetic(a: int = 0, b: int = 0) -> str:
 
 # 5
 def cashbox(cash_sum: int = 0) -> str:
-    """A function that return the number of required coin."""
+    """Function that return the number of required coin."""
     answer = ''
     main_sum = cash_sum
 
@@ -87,7 +87,7 @@ def cashbox(cash_sum: int = 0) -> str:
 
 
 def full_bread(old_bread_count: int = 0, bread_cost: int = 49, discount: int = 60) -> str:
-    """A function that calculate the cost of bread"""
+    """Function that calculate the cost of bread"""
     old_bread_cost = bread_cost - bread_cost * 60 / 100
     return (f'\nСтоимость свежей буханки: {bread_cost}'
             f'\nСтоимость вчерашней буханки со скидкой: '
@@ -97,7 +97,7 @@ def full_bread(old_bread_count: int = 0, bread_cost: int = 49, discount: int = 6
 
 
 def main():
-    """A main function that gives options to choice for the user."""
+    """Main function that gives options to choice for the user."""
     # Выбор пользователем задания
     result: str
     while True:
